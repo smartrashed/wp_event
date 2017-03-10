@@ -1,0 +1,144 @@
+/*
+Theme Name: Event Term
+Theme URI: https://www.codexcoder.com/
+Author: CodexCoder
+Author URI: https://themeforest.net/user/codexcoder
+Description: Event Term is a modern wordpress theme to build up a professional Event website. 
+Version: 1.0.2
+License: See on zip package
+License URI: See on zip package
+Text Domain: event-term
+Tags: one-column, two-columns, right-sidebar, custom-colors, featured-images, sticky-post, theme-options, threaded-comments
+*/
+.widget .search-form .screen-reader-text.widget.search form {
+	position: relative;
+}
+.widget .search-form .screen-reader-text {
+    display: none;
+}
+.widget .search-form label{
+    width: 100%;
+}
+.widget .search-form {
+    position: relative;
+}
+.widget .search-form .search-field,
+.widget.search form input{
+    width: 100%;
+    padding: 19px 45px 18px 15px;
+    border: 1px solid #ebebeb;
+    background-color: #fafafa;
+    border-radius: 4px;
+}
+.widget .search-form .search-submit {
+    position:absolute;
+    width:24px;
+    height:24px;
+    background: url("assets/images/search_icon.png") top left no-repeat;  
+    border: none;
+    right: 10px;
+    top: 18px;
+}
+.widget.search form span i {
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    margin-top: -10px;
+    font-size: 18px;
+    color: #c2c2c2;
+    cursor: pointer;
+}
+/* 4  post pagination  */
+.post-pagination-area {
+	margin-top: 70px;
+}
+.post-pagination {
+    padding-left: 0;
+    margin-bottom: 0;
+    float: left;
+}
+.post-pagination > li {
+    display: inline-block;
+    margin-right: 5px;
+}
+.post-pagination > li > a {
+    display: block;
+    border: 2px solid #ebebeb;
+    border-radius: 0px;
+    padding: 0px 12px;
+    text-align: center;
+    color: #363636;
+    font-size: 15px;
+    line-height: 32px;
+    border-radius: 1px;
+    -webkit-transition: all 0.15s ease-in-out;
+}
+.post-pagination > li > a:hover {
+	background-color: #ff6f50;
+	color: #fff;
+	border: 2px solid #ff6f50;
+	border-radius: 0px;
+}
+.post-pagination .active>a {
+	background-color: #ff6f50;
+	color: #fff !important;
+	border: 2px solid #ff6f50 !important;
+	border-radius: 0px !important;
+}
+.post-pagination-number {
+	float: right;
+	color: #363636;
+	font-size: 15px;
+	font-weight: 700;
+}
+.widget .catagory-list li {
+	padding: 6px 0;
+}
+.widget .catagory-list li a {
+    font-size: 15px;
+    padding: 5px 10px;
+    background-color: #fafafa;
+    color: #707070;
+    display: inline-block;
+    border-radius: 3px;
+    -webkit-transition: all 0.15s ease-in-out;
+}
+.widget .catagory-list li>span {
+	float: right;
+	padding: 5px 8px;
+	background-color: #fafafa;
+	border-radius: 3px;
+	color: #707070;
+	-webkit-transition: all 0.15s ease-in-out;
+}
+.widget .catagory-list li:hover>a,
+.widget .catagory-list li:hover>span {
+	background-color: #ff6f50;
+	color: #fff;
+}
+.widget .catagory-list li a i {
+    margin-right: 6px;
+    color: #c9c9c9;
+}
+
+.tagcloud a {
+	font-size: 15px !important;
+        font-weight: bold;
+	padding: 8px 15px;
+	background-color: #282828;
+	color: #fff;
+	display: inline-block;
+	border-radius: 3px;
+        margin-right: 5px;
+        margin-bottom: 5px;
+	-webkit-transition: all .25s ease-in-out;
+	   -moz-transition: all .25s ease-in-out;
+	     -o-transition: all .25s ease-in-out;
+	    -ms-transition: all .25s ease-in-out;
+	        transition: all .25s ease-in-out;
+}
+.tagcloud a:hover {
+	background-color: #FCA413;
+	color: #fff;
+}
+
