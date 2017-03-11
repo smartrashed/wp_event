@@ -118,3 +118,15 @@
     </header>
     <!-- end header  -->
     <!--  page header section End  -->
+    <!--  page header section start  -->
+    <section class="page-header-content">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="page-header-content-inner">
+                    <?php event_hub_breadcrumbs() ?>
+                </div>
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section>
+    <!--  page header section End  -->
