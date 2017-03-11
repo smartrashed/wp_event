@@ -1,28 +1,43 @@
 <?php
 /**
- * The template for displaying the footer
+ * The template for displaying the footer.
  *
  * Contains the closing of the #content div and all content after.
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Event_Hub
+ * @package event-hub
  */
+if ( ! is_active_sidebar( 'footer-sidebar' ) ) {
+    return;
+}
+$eh_copyright_text_author = '';
 
+if (function_exists('cs_get_option')):
+    
+    $eh_copyright_text_author = cs_get_option( 'eh_copyright_text_author' );
+    
+endif;
 ?>
-
-	</div><!-- #content -->
-
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'event-hub' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'event-hub' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'event-hub' ), 'event-hub', '<a href="https://automattic.com/" rel="designer">Codex Coder</a>' ); ?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+<!--  footer start   -->
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                            <div class="f-widget">
+                                     <?php dynamic_sidebar('footer-sidebar'); ?>
+                            </div>             
+                    </div>     
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </div><!-- /.footer-top -->
+        <div class="footer-bottom">
+            <p>Copyright &copy; 2016. Design and Development by <a href="#"><?php echo $eh_copyright_text_author ?></a></p>
+        </div>
+    </footer>
+    <!--  footer end   -->
 
 <?php wp_footer(); ?>
-
 </body>
 </html>

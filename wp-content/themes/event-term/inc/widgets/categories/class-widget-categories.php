@@ -1,12 +1,12 @@
 <?php
 
-class Widget_Categories extends Event_Term_Widget
+class Widget_Categories extends Event_Hub_Widget
 {
 	public function __construct()
 	{
             parent::__construct(
-            'et_categories',
-            esc_html__('Event Term :: Categories', 'event-term'),
+            'eh_categories',
+            esc_html__('Event hub :: Categories', 'event-hub'),
             array('description' => 'Display categories with post count' )
         );
 	}
@@ -26,9 +26,9 @@ class Widget_Categories extends Event_Term_Widget
         }
         ?>
             <ul class="catagory-list">
-                <?php $categories = get_terms( 'category', 'orderby=name&hide_empty=true' ); 
+                <?php $categories = get_hubs( 'category', 'orderby=name&hide_empty=true' ); 
                 foreach ($categories as $categorie):
-                    $categorie_link = get_term_link( $categorie, $categorie->slug );
+                    $categorie_link = get_hub_link( $categorie, $categorie->slug );
                     ?>
                 <li><a href="<?php echo esc_url($categorie_link) ?>"> <?php echo esc_html($categorie->name) ?></a> <span><?php echo esc_html($categorie->count) ?></span></li>
                 <?php endforeach; ?>
@@ -45,7 +45,7 @@ class Widget_Categories extends Event_Term_Widget
             array(
                 'id'      => 'title',
                 'type'    => 'text',
-                'title'   => esc_html__('Title:', 'event-term'),
+                'title'   => esc_html__('Title:', 'event-hub'),
             ),                         
              
         );

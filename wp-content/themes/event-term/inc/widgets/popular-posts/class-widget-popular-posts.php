@@ -1,11 +1,11 @@
 <?php
 
-class Widget_Popular_Posts extends Event_Term_Widget {
+class Widget_Popular_Posts extends Event_Hub_Widget {
     public function __construct()
     {
         parent::__construct(
-            'et_popular_posts',
-            esc_html__('Event Term :: Popular Posts', 'event-term'),
+            'eh_popular_posts',
+            esc_html__('Event Hub :: Popular Posts', 'event-hub'),
             array('description' => 'Widgets to display popular posts' )
         );
     }
@@ -43,7 +43,7 @@ class Widget_Popular_Posts extends Event_Term_Widget {
                     <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
                    <li <?php post_class('small-post-item') ?>>
                        <?php if(has_post_thumbnail()): ?>
-                        <a href="<?php the_permalink(); ?>" class="post-thumb"><?php the_post_thumbnail('event-term-small-thumb'); ?></a>
+                        <a href="<?php the_permalink(); ?>" class="post-thumb"><?php the_post_thumbnail('event-hub-small-thumb'); ?></a>
                         <?php endif; ?>
                         <span class="content">
                             <h2 class="title"><a href="<?php the_permalink(); ?>" class="title"><?php the_title(); ?></a></h2>
@@ -57,7 +57,7 @@ class Widget_Popular_Posts extends Event_Term_Widget {
                     <?php wp_reset_postdata(); ?>
                 </ul>
             <?php else : ?>
-                <p><?php esc_html_e( 'Sorry, no posts matched your criteria.', 'event-term'); ?></p>
+                <p><?php esc_html_e( 'Sorry, no posts matched your criteria.', 'event-hub'); ?></p>
             <?php endif; ?>
 
 
@@ -71,12 +71,12 @@ class Widget_Popular_Posts extends Event_Term_Widget {
             array(
                 'id'      => 'title',
                 'type'    => 'text',
-                'title'   => esc_html__('Title:', 'event-term'),
+                'title'   => esc_html__('Title:', 'event-hub'),
             ),
             array(
                 'id'      => 'limit',
                 'type'    => 'number',
-                'title'   => esc_html__('Limit Posts:', 'event-term'),
+                'title'   => esc_html__('Limit Posts:', 'event-hub'),
                 'default'   => '5'
             ),
              

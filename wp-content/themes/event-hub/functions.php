@@ -6,7 +6,7 @@
  *
  * @package event-hub
  */
-define( 'EVENTTERM_ASSETS' , get_template_directory_uri() . '/assets' );
+define( 'EVENTHUB_ASSETS' , get_template_directory_uri() . '/assets' );
 
 /**
  * Load Core

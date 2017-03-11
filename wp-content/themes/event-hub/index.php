@@ -9,24 +9,29 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Event_Hub
+ * @package event-hhub
  */
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+<!--  start main content section  -->
+<section id="content" class="blog-page">
+    <div class="container">
+        <div class="row">
+            <!--  start main content  -->
+            <main id="main-content" class="col-md-8">
+                <div class="theiaStickySidebar">
 
 		<?php
 		if ( have_posts() ) :
 
-			if ( is_home() && ! is_front_page() ) : ?>
+			/*if ( is_home() && ! is_front_page() ) : ?>
 				<header>
 					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
 				</header>
 
 			<?php
-			endif;
+			endif;*/
 
 			/* Start the Loop */
 			while ( have_posts() ) : the_post();
@@ -48,9 +53,16 @@ get_header(); ?>
 
 		endif; ?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+					</div>
+                 </main>
+                <!-- end main conent  -->    
+                <?php get_sidebar() ; ?>
+            </div><!-- /.row -->
+
+        </div><!-- /.container -->
+    </section>
+    <!--  end main content section  -->
 
 <?php
-get_sidebar();
+
 get_footer();

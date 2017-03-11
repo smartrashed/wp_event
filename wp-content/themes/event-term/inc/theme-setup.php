@@ -33,7 +33,7 @@ function event_term_setup() {
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
 	add_theme_support( 'post-thumbnails' );
-        add_image_size( 'event-term-recent-news', 360, 450, true );
+        add_image_size( 'event-term-blog-news', 770, 420, true );
         add_image_size( 'event-term-related-post', 360, 250, true );
         add_image_size( 'event-term-small-thumb', 80, 66, true );
         add_image_size( 'event-term-sponsors-logo', 252, 136, true );

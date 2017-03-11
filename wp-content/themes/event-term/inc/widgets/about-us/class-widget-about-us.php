@@ -1,10 +1,10 @@
 <?php
-class Widget_About_Us extends Event_Term_Widget {
+class Widget_About_Us extends Event_Hub_Widget {
 	public function __construct()
 	{
 		parent::__construct(
-            'et_about_us',
-            esc_html__('Event Term :: About Us', 'event-term'),
+            'eh_about_us',
+            esc_html__('Event Hub :: About Us', 'event-hub'),
             array('description' => 'About us widget to display your logo content and social profiles.' )
         );
 	}
@@ -107,57 +107,57 @@ class Widget_About_Us extends Event_Term_Widget {
             array(
                 'id'      => 'title',
                 'type'    => 'text',
-                'title'   => esc_html__('Title:', 'event-term'),
+                'title'   => esc_html__('Title:', 'event-hub'),
             ),
             array(
                 'id'      => 'logo',
                 'type'    => 'image',
-                'title'   => esc_html__('Logo:', 'event-term'),
+                'title'   => esc_html__('Logo:', 'event-hub'),
             ),
             array(
                 'id'      => 'content',
                 'type'    => 'textarea',
-                'title'   => esc_html__('Content:', 'event-term'),
+                'title'   => esc_html__('Content:', 'event-hub'),
             ),
             array(
                 'id'      => 'fb_url',
                 'type'    => 'text',
-                'title'   => esc_html__('Facebook Url:', 'event-term'),
+                'title'   => esc_html__('Facebook Url:', 'event-hub'),
             ),
             array(
                 'id'      => 'twt_url',
                 'type'    => 'text',
-                'title'   => esc_html__('Twitter Url:', 'event-term'),
+                'title'   => esc_html__('Twitter Url:', 'event-hub'),
             ),
             array(
                 'id'      => 'rss_url',
                 'type'    => 'text',
-                'title'   => esc_html__('RSS Url:', 'event-term'),
+                'title'   => esc_html__('RSS Url:', 'event-hub'),
             ),
             array(
                 'id'      => 'pin_url',
                 'type'    => 'text',
-                'title'   => esc_html__('Pinterest Url:', 'event-term'),
+                'title'   => esc_html__('Pinterest Url:', 'event-hub'),
             ),
             array(
                 'id'      => 'dribble_url',
                 'type'    => 'text',
-                'title'   => esc_html__('Dribble Url:', 'event-term'),
+                'title'   => esc_html__('Dribble Url:', 'event-hub'),
             ),
             array(
                 'id'      => 'vimeo_url',
                 'type'    => 'text',
-                'title'   => esc_html__('Vimeo Url:', 'event-term'),
+                'title'   => esc_html__('Vimeo Url:', 'event-hub'),
             ),
             array(
                 'id'      => 'behance_url',
                 'type'    => 'text',
-                'title'   => esc_html__('Behance Url:', 'event-term'),
+                'title'   => esc_html__('Behance Url:', 'event-hub'),
             ),
             array(
                 'id'      => 'instagram_url',
                 'type'    => 'text',
-                'title'   => esc_html__('Instagram Url:', 'event-term'),
+                'title'   => esc_html__('Instagram Url:', 'event-hub'),
             ),
         );
     }
