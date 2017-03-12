@@ -25,7 +25,7 @@ endif;
 <section class="bannar bannar-v2">
     <div class="bannar-img">
         <?php if (!empty($eh_page_banner)): ?>
-        <img src="<?php echo esc_url($et_page_banner)?>" alt="<?php get_bloginfo(); ?>">
+        <img src="<?php echo esc_url($eh_page_banner)?>" alt="<?php get_bloginfo(); ?>">
         <?php endif; ?>
         <div class="overlay"></div>
         <div class="bannar-conent-area">
@@ -34,7 +34,7 @@ endif;
                     <div class="slider-carousel-content">
                         <div class="header-countdown-wrapper">
                             <div class="header-countdown">
-                                <div id="header-counter2" class="header-counter" data-days="days" data-hrs="hrs" data-min="min" data-sec="sec" data-label="time left" data-gmt="0"><?php echo esc_html($et_event_date_counter) ?></div>
+                                <div id="header-counter2" class="header-counter" data-days="days" data-hrs="hrs" data-min="min" data-sec="sec" data-label="time left" data-gmt="0"><?php echo esc_html($eh_event_date_counter) ?></div>
                             </div>
                         </div>
 
@@ -52,10 +52,10 @@ endif;
                         </div>
                         <div class="slider-btn">
                             <?php if(!empty($eh_reg_btn)): ?>
-                            <a href="<?php echo esc_url($et_reg_btn) ?>" class="custom-btn register-now hvr-bounce-to-bottom"><?php esc_html_e('Register Now', 'event-term') ?></a>
+                            <a href="<?php echo esc_url($et_reg_btn) ?>" class="custom-btn register-now hvr-bounce-to-bottom"><?php esc_html_e('Register Now', 'event-hub') ?></a>
                             <?php endif; ?>
                             <?php if(!empty($eh_view_detail_btn)): ?>
-                            <a href="<?php echo esc_url($et_view_detail_btn) ?>" class="custom-btn view-detail hvr-bounce-to-bottom"><?php esc_html_e('View Details', 'event-term') ?></a>
+                            <a href="<?php echo esc_url($et_view_detail_btn) ?>" class="custom-btn view-detail hvr-bounce-to-bottom"><?php esc_html_e('View Details', 'event-hub') ?></a>
                             <?php endif; ?>                            
                         </div>
                     </div><!-- /.slider-content -->	

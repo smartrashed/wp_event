@@ -55,7 +55,7 @@ $options[]    = array(
                 'title' => esc_html__('Page Header', 'event-hub'),
                 'label' => esc_html__('If you want to disable page header for this page switch "off" to this button', 'event-hub'),
                 'default' => true,
-                'dependency' => array( 'et_custom_page_settings', '==', 'true' ),
+                'dependency' => array( 'eh_custom_page_settings', '==', 'true' ),
             ),
             array(
                 'id'    => 'eh_page_header_bg',
@@ -68,7 +68,7 @@ $options[]    = array(
                 'content'   => esc_html__('Banner', 'event-hub'),
             ),
             array(
-                'id'    => 'et_is_banner',
+                'id'    => 'eh_is_banner',
                 'type'  => 'switcher',
                 'title' => esc_html__('Page banner with event counter', 'event-hub'),
                 'label' => esc_html__('If you want to display a banner for this page switch "on" to this button', 'event-hub'),
@@ -85,13 +85,13 @@ $options[]    = array(
                     
                 ),
                 'default'    => '1',
-                'dependency' => array( 'et_is_banner', '==', 'true' ),
+                'dependency' => array( 'eh_is_banner', '==', 'true' ),
             ),
             array(
                 'id'    => 'eh_page_banner',
                 'type'  => 'upload',
                 'title' => esc_html__('Banner', 'event-hub'),
-                'dependency' => array( 'et_is_banner', '==', 'true' ),
+                'dependency' => array( 'eh_is_banner', '==', 'true' ),
             ),
             array(
                 'id'      => 'eh_banner_title',
@@ -102,42 +102,9 @@ $options[]    = array(
             array(
                 'id'      => 'eh_banner_sub_title',
                 'type'    => 'textarea',
-                'title'   => esc_html__('Banner sub title (banner 3 & 4)', 'event-hub'),
+                'title'   => esc_html__('Banner sub title ', 'event-hub'),
                 'dependency' => array( 'eh_is_banner', '==', 'true' ),
-            ),
-            array(
-                'id'      => 'eh_event_special_fac',
-                'type'    => 'group',
-                'button_title'    => 'Add New',
-                'title'   => esc_html__('Event special facilities (banner 3)', 'event-hub'),
-                'accordion_title' => esc_html__('New Facility', 'event-hub'),
-                'fields'          => array(
-                    array(
-                        'id'          => 'eh_facility',
-                        'type'        => 'text',
-                        'title'       => esc_html__('Facility', 'event-hub'),
-                    ),
-                ),
-                'dependency' => array( 'eh_is_banner|et_banner_style_3', '==|==', 'true|true' ),
-            ),
-            array(
-                'id'    => 'eh_reg_form_title',
-                'type'  => 'text',
-                'title' => esc_html__('Registration form title (Banner 3)', 'event-hub'),
-                'dependency' => array( 'et_is_banner|et_banner_style_3', '==|==', 'true|true' ),
-            ),
-            array(
-                'id'    => 'eh_reg_form_sub_title',
-                'type'  => 'textarea',
-                'title' => esc_html__('Registration form sub title (Banner 3)', 'event-hub'),
-                'dependency' => array( 'eh_is_banner|eh_banner_style_3', '==|==', 'true|true' ),
-            ),
-            array(
-                'id'    => 'eh_reg_form_shortcode',
-                'type'  => 'textarea',
-                'title' => esc_html__('Registration form Shortcode (Banner 3)', 'event-hub'),
-                'dependency' => array( 'et_is_banner|et_banner_style_3', '==|==', 'true|true' ),
-            ),
+            ),          
         ),
     ),
     // end: a section

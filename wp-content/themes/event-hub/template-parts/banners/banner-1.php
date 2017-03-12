@@ -22,21 +22,21 @@ endif;
 ?>
 <section class="bannar bannar-v1">
     <div class="bannar-img">
-        <?php if (!empty($et_page_banner)): ?>
-        <img src="<?php echo esc_url($et_page_banner)?>" alt="<?php get_bloginfo(); ?>">
+        <?php if (!empty($eh_page_banner)): ?>
+        <img src="<?php echo esc_url($eh_page_banner)?>" alt="<?php get_bloginfo(); ?>">
         <?php endif; ?>
         <div class="overlay"></div>
         <div class="bannar-conent-area">
             <div class="bannar-header">
                 <div class="container">
                     <?php if (!empty($eh_banner_title)): ?>
-                    <h1><?php echo esc_html($et_banner_title) ?></h1>
+                    <h1><?php echo esc_html($eh_banner_title) ?></h1>
                     <?php endif; ?>
                     <ul class="meta-post">
                         <?php if (!empty($eh_event_date)): ?>
                         <li>
                             <i class="fa fa-calendar"></i>
-                            <?php echo esc_html($et_event_date) ?>
+                            <?php echo esc_html($eh_event_date) ?>
                         </li>
                         <?php endif; ?>
                         <?php if (!empty($eh_event_location)): ?>
@@ -56,7 +56,7 @@ endif;
 
                             <div class="header-countdown-wrapper">
                                 <div class="header-countdown">
-                                    <div id="header-counter1" class="header-counter" data-days="days" data-hrs="hrs" data-min="min" data-sec="sec" data-label="time left" data-gmt="0"><?php echo esc_html($et_event_date_counter) ?></div>
+                                    <div id="header-counter1" class="header-counter" data-days="days" data-hrs="hrs" data-min="min" data-sec="sec" data-label="time left" data-gmt="0"><?php echo esc_html($eh_event_date_counter) ?></div>
                                 </div>
                             </div>
                         </div><!-- /.col-md-8 -->
@@ -64,10 +64,10 @@ endif;
                         <div class="col-sm-6 col-md-4">
                             <div class="bannar-btn">
                                 <?php if(!empty($eh_reg_btn)): ?>
-                                <a href="<?php echo esc_url($et_reg_btn) ?>" class="register-now hvr-bounce-to-bottom"><?php esc_html_e('Register Now', 'event-hub') ?></a>
+                                <a href="<?php echo esc_url($eh_reg_btn) ?>" class="register-now hvr-bounce-to-bottom"><?php esc_html_e('Register Now', 'event-hub') ?></a>
                                 <?php endif; ?>
                                 <?php if(!empty($eh_view_detail_btn)): ?>
-                                <a href="<?php echo esc_url($et_view_detail_btn) ?>" class="view-detail hvr-bounce-to-bottom"><?php esc_html_e('View Details', 'event-hub') ?></a>
+                                <a href="<?php echo esc_url($eh_view_detail_btn) ?>" class="view-detail hvr-bounce-to-bottom"><?php esc_html_e('View Details', 'event-hub') ?></a>
                                 <?php endif; ?>
                             </div>
                         </div><!-- /.col-md-4 -->

@@ -1,30 +1,35 @@
 <?php
 /**
- * Template part for displaying results in search pages
+ * Template part for displaying posts.
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Event_Hub
+ * @package event-hub
  */
 
 ?>
+<div id="post-<?php the_ID(); ?>" <?php post_class('post-item'); ?>>
+    <div class="post-thumb">
+        <a href="blog-single.html"><?php the_post_thumbnail();?></a>
+    </div>
+    <div class="content-outer">
+        <div class="content">
+            <h3 class="title"><a href="<?php the_permalink(); ?>"><?php the_title() ?></a></h3>
+            <div class="meta-post">
+                <span class="date"><i class="fa fa-calendar"></i><?php the_date(); ?></span>
+                <span class="border"></span>
+                <a href="#" class="comment"><i class="fa fa-comment"></i><?php the_comment(); ?></a>
+                <span class="border"></span>
+                <span class="like"><i class="fa fa-heart"></i> 26 likes</span>
+            </div>
+            <div class="excerpt">
+                <?php the_content(); ?>
+            </div>
+            <a href="<?php the_permalink(); ?>" class="custom-btn hvr-bounce-to-bottom">Load More</a>
+        </div><!-- /.content -->
+    </div><!-- /.content-outer -->
+</div><!-- /.post-item -->
+                        
+                     
+                    
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-
-		<?php if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php event_hub_posted_on(); ?>
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
-
-	<div class="entry-summary">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
-
-	<footer class="entry-footer">
-		<?php event_hub_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-## -->

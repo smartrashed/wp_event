@@ -30,20 +30,6 @@
     </div><!-- /.content-outer -->
 </div><!-- /.post-item -->
                         
-                       <!--  start pagination
-                       <div class="post-pagination-area">
-                           <ul class="post-pagination">
-                               <li><a>Prev</a></li>
-                               <li><a href="#">1 </a></li>
-                               <li class="active"><a href="#">2</a></li>
-                               <li><a>...</a></li>
-                               <li><a href="#">4</a></li>
-                               <li><a href="#">5</a></li>
-                               <li><a href="#">Next</a></li>
-                           </ul>
-                           <div class="post-pagination-number">
-                               <span>page 1 of 8</span>
-                           </div>
-                       </div>/.post-pagination-area -->
+                     
                     
 
